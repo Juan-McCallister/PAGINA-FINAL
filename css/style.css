@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --Rojo-Netflix: #E50914;
+    --Blanco: #FFFFFF;
+    --Negro: #000000;
+}
+
+
+body{
+    background: var(--Negro);
+    color: var(--Blanco);
+}
+
+body::-webkit-scrollbar{
+    background: black;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: red;
+    border: solid 3px black;
+    border-radius: 4px;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/cintas.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+
+nav{
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carta{
+    width: 850px; /* Ancho de la imagen */
+    height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+    border: 3px solid #ccc; /* Borde de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  /* Estilo para la imagen cuando el cursor pasa sobre ella */
+  .carta:hover {
+    opacity: 0.8; /* Cambiar la opacidad de la imagen */
+  }
+  /* Estilo para la imagen cuando está activa (clicada) */
+  .carta:active {
+    transform: scale(0.95);
+}
+
+
+.logo {
+    width: 150px;
+}
+
+nav button{
+    border: none;
+    outline: none;
+    background: var(--Rojo-Netflix);
+    color: var(--Blanco);
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.languaje-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 10px 25px;
+}
+
+
+.languaje-btn img{
+    width: 10px;
+    margin-left: 13px;
+}
+
+.header-content{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 70px;
+    max-width: 650px;
+    min-width: 1200px;
+    margin-bottom: 20px;
+}
+.header-content h3{
+     font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+
+
+.header-content p{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.email-singup{
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 25%;
+    overflow: hidden;
+}
+
+.email-singup input{
+    width: 250px;
+    flex: 1;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    padding: 20px 20px;
+    font-size: 20px;
+    background: #00000091;
+    border: 1px solid white;
+    color: var(--Blanco);
+    border-radius: 4px;
+}
+
+.email-singup label{
+    position: absolute;
+    left: 29%;
+    transition: all 0.3s;
+}
+
+.email-singup input:focus ~ label{
+    transform: translateY(-20px);
+    font-size: 12px;
+}
+ 
+.email-singup button{
+    background: var(--Rojo-Netflix);
+    border: none;outline: none;
+    color: var(--Blanco);
+    margin: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+
+.email-singup button:hover{
+    background: #b2070a;
+}
+
+.email-singup button i{
+    margin-left: 10px;
+}
+
+
+
+/*---------------feactures-----------------*/
+
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 70px;
+}
+
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;    
+}
+
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/*-------------------faq---------------*/
+
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+
+
+.accordion li{
+       list-style: none;
+       width: 100%;
+       padding: 5px;
+}
+
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+
+input[type="radio"]{
+    display: none;
+}
+
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.faq .email-iniciarsesion{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small{
+    font-size: 18px;
+
+}
+
+hr{
+    padding: 5px;
+    border: none;
+    background: #202426;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+
+/*-----------------footer----------------------*/
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .languaje-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*--------------- code for responsive mode------------*/
+
+
+@media only screen and (max-width: 700px) {
+    .logo{
+        width: 120px;
+    }
+    nav button {
+        padding: 2px 10px;
+    }
+    nav .languaje-btn{
+        padding: 10px 10px;
+    }
+    .header-content{
+        width: 175%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+    .header-content h1{
+        font-size: 25px;  
+    }
+    .header-content {
+        text-align: center; /* Centro el contenido del header */
+    }
+    .email-singup button{
+        font-size: 15px;
+        padding: 15px 15px;
+    }
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+    .features h2{
+        font-size: 50px;
+    }
+    .features p{
+        font-size: 22px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding: 5px 0;
+    }
+    .faq h2{
+        font-size: 25px;
+    }
+    .accordion .content{
+        font-size: 20px;
+    }
+    .accordion li label{
+        padding: 10px;
+        font-size: 18px;
+    }
+    label::after{
+        font-size: 25px;
+    }
+
+
+
+
+
+
+    
+}
